@@ -93,6 +93,8 @@ Deployed on Render with:
 
 ## Screenshots
 <img width="1404" height="665" alt="Screenshot 2025-12-29 at 12 23 40 PM" src="https://github.com/user-attachments/assets/df31e2d4-e6c0-46d5-b186-053ea7c0d3ad" />
+<img width="1431" height="639" alt="Screenshot 2025-12-29 at 12 24 46 PM" src="https://github.com/user-attachments/assets/21522897-e45a-4029-a9d5-16f0ac0430a6" />
+<img width="1416" height="627" alt="Screenshot 2025-12-29 at 12 25 04 PM" src="https://github.com/user-attachments/assets/e932482f-f813-47d5-b11f-fe7b6dfb6b44" />
 
 
 ## Contact
