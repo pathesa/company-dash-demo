@@ -1,0 +1,30 @@
+client_segment,client_type,sum,count,conversion_rate
+Catering Company/Florist,New Client,23,42,54.76
+Catering Company/Florist,Repeat Client,17,49,34.69
+Catering Company/Florist,Second Order,2,3,66.67
+Conference or Trade Show,New Client,10,23,43.48
+Conference or Trade Show,Repeat Client,11,12,91.67
+Conference or Trade Show,Second Order,2,2,100.0
+Creative Agency or Media Company,New Client,295,494,59.72
+Creative Agency or Media Company,Repeat Client,240,351,68.38
+Creative Agency or Media Company,Second Order,71,101,70.3
+Creative Agency or Media Company,Third + Order,6,7,85.71
+Event Designer Planning and Production,New Client,346,640,54.06
+Event Designer Planning and Production,Repeat Client,467,697,67.0
+Event Designer Planning and Production,Second Order,57,103,55.34
+Event Designer Planning and Production,Third + Order,12,16,75.0
+In-house Company,New Client,219,413,53.03
+In-house Company,Repeat Client,84,101,83.17
+In-house Company,Second Order,45,63,71.43
+In-house Company,Third + Order,2,5,40.0
+Photo,New Client,329,626,52.56
+Photo,Repeat Client,310,531,58.38
+Photo,Second Order,59,103,57.28
+Photo,Third + Order,7,11,63.64
+Social No Planner,New Client,100,235,42.55
+Social No Planner,Repeat Client,3,5,60.0
+Social No Planner,Second Order,1,2,50.0
+Venue,New Client,17,34,50.0
+Venue,Repeat Client,25,30,83.33
+Venue,Second Order,2,2,100.0
+Venue,Third + Order,1,1,100.0
