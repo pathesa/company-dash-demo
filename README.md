@@ -26,7 +26,7 @@ This project analyzes a transactional dataset of 5,000+ historical deals from th
 Because a high-value quote does not always equal high-value revenue, I calculated the Expected Value for every industry segment and price band:
 LVI = Avg. Deal Value × Conversion Rate
 
-This revealed the "Sweet Spot"—segments with moderate deal sizes ($1.5k–$2.5k) that outperformed larger deals in total expected revenue due to higher conversion rates.
+This revealed the "Sweet Spot" segments with moderate deal sizes ($1.5k-$2.5k) that outperformed larger deals in total expected revenue due to higher conversion rates.
 
 ## 3. Priority Matrix
 
