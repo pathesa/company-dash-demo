@@ -1,10 +1,8 @@
 # Company Revenue and Client Intelligence Dashboard
 
-Data-Driven Strategy for Marketplace Operations
-
 ## Project Overview
 
-This project analyzes a transactional dataset of 5,000+ historical deals from the event-driven company to identify conversion patterns and optimize sales outreach. By engineering a Lead Value Index (LVI), I transformed raw transactional data into a prioritized sales framework that accounts for deal size, client segment and the statistical probability of closing.
+This project analyzes a transactional dataset of 5,000+ historical deals from an event-driven company to identify conversion patterns and optimize sales outreach. By engineering a Lead Value Index (LVI), I transformed raw transactional data into a prioritized sales framework that accounts for deal size, client segment and the statistical probability of closing.
 
 ## Technical Stack
 
