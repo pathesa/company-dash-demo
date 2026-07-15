@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project analyzes a transactional dataset of 5,000+ historical deals from an event-driven company to identify conversion patterns and optimize sales outreach. By engineering a Lead Value Index (LVI), I transformed raw transactional data into a prioritized sales framework that accounts for deal size, client segment and the statistical probability of closing.
+This project builds an end-to-end analytics pipeline that extracts live CRM data, cleans and transforms transactional records, and powers an interactive dashboard for analyzing 5,000+ deals. The dashboard helps identify conversion patterns, evaluate customer segments, and uncover opportunities to improve sales performance.
 
 ## Technical Stack
 
@@ -11,29 +11,33 @@ This project analyzes a transactional dataset of 5,000+ historical deals from an
 - **Deployment:** Dash (Plotly), GitHub, Render
 - **Data Source:** Sell CRM API (live integration)
 
-## Key Analytical Steps
+## Analytical Steps
 
-### 1. Data Wrangling & Cleaning
+### 1. Data Wrangling & Feature Engineering
 
-- **Multi-Source Merging:** Combined `deals.csv` and `contacts.csv` to reconstruct missing client segment data.
-- **Temporal Filtering:** Focused on post-2022 data to ensure insights reflected current market trends.
-- **Target Engineering:** Defined a binary `converted` feature based on "Event Complete" vs. "Cancelled/Unqualified" outcomes.
+- Retrieved live deal, contact and stage data from the Sell CRM API.
+- Flattened nested JSON custom fields into tabular datasets.
+- Merged deal and contact records to recover missing client segments.
+- Filtered historial data to completed, cancelled and unqualified opportunities after 2022.
+- Engineered analysis features including:
+  - Binary conversion outcome
+  - Lead time
+  - Deal size bands
+  - Standardized client segment categories
 
-### 2. Lead Value Index (LVI) Modeling
+### 2. Conversion & Revenue Analysis
 
-Because a high-value quote does not always equal high-value revenue, I calculated the Expected Value for every industry segment and price band:
-LVI = Avg. Deal Value × Conversion Rate
+Rather than evaluating opportunities solely based on quote value, I combined historical conversion rates with average deal size to estimate expected revenue across client segment deal bands. This analysis identified segments that consistently generated the highest expected return, as well as high-value segments where low conversion rates represented potential revenue opportunities.
 
-This revealed the "Sweet Spot" segments with moderate deal sizes ($1.5k-$2.5k) that outperformed larger deals in total expected revenue due to higher conversion rates.
+## 3. Interactive Dashboard
 
-## 3. Priority Matrix
+Built an interactive dashboard to explore:
 
-The final output is a quadrant-based Priority Matrix used for resource allocation:
-
-- **Strategic Priority:** High Value / High Conversion (Focus here)
-- **Revenue Leakage:** High Value / Low Conversion (Investigate pricing/friction)
-- **Efficiency Wins:** Low Value / High Conversion (Automate these)
-- **Low ROI:** Low Value / Low Conversion (Deprioritize)
+- Conversion rates by client segment
+- Revenue contribution by segment and deal size
+- Expected revenue across customer groups
+- Missed revenue from unconverted opportunities
+- Priority matrix comparing conversion rate and expected revenue
 
 ## How to Use the Dashboard
 
@@ -43,50 +47,34 @@ The final output is a quadrant-based Priority Matrix used for resource allocatio
 - **Username:** `admin`
 - **Password:** `demo`
 
-### Explore the Data
-
 - **Tab 1 (Client Segment Overview):** View portfolio health with KPIs and segment-level conversion metrics
 - **Tab 2 (Segment Deep Dive):** Analyze deal band performance within each segment
 - **Tab 3 (Opportunity Analysis):** Use the Priority Matrix to identify strategic opportunities and revenue leakage
-
-### Run Locally (Development)
-```bash
-git clone https://github.com/pathesa/company-dash-demo.git
-cd company-dash-demo
-pip install -r requirements.txt
-python app.py
-```
-
-Dashboard runs on `http://localhost:8050`
-
-**Note:** Local version uses sample data (see `/data` folder)
 
 ## Data Privacy
 
 - Dashboard is password-protected for secure access
 - Production uses live Sell CRM API with authenticated credentials
-- Sample data provided for local development and demonstrations
 - No sensitive client information is exposed in the repository
 
 ## Technologies & Concepts
 
-- **Data Pipeline:** ETL with pandas and API integration
-- **Statistical Analysis:** Correlation matrices, cohort analysis, temporal trends
-- **Visualization Best Practices:** Interactive dashboards, quadrant analysis, heatmaps
-- **DevOps:** CI/CD pipeline via GitHub and Render for automated deployment
+- **Data Engineering:** REST API integration, ETL pipeline, data cleaning and transformation with pandas
+- **Data Analysis:** Feature engineering, conversion analysis, expected value analysis, customer segmentation
+- **Visualization:** Interactive dashboards built with Plotly Dash
+- **Deployment:** GitHub, Render, environment variables, automated deployment
 
 ## Deployment
 
 Deployed on Render with:
 - Automated CI/CD pipeline via GitHub
 - Environment-based configuration for credentials
-- 15-minute idle sleep (free tier) with ~30-second wake-up time
+- 15-minute idle sleep with ~30-second wake-up time
 - Live Sell CRM API integration for real-time data refresh
 
 ## Future Enhancements
 
 - Time-series forecasting for revenue trends
-- API integration with Sell CRM for automated lead scoring
 - New vs Repeat Client Analysis
 
 ## Screenshots
